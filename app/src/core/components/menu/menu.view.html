@@ -1,0 +1,8 @@
+<div class="menu">
+  <md-button
+    ng-href="{{menuItem.href}}"
+    ng-repeat="menuItem in menuItems"
+    ng-class="{active: menuItem.active}">
+      {{menuItem.title}}
+  </md-button>
+</div>

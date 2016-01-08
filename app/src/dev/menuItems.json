@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Feed",
+    "pageType": "feed",
+    "href": "#/"
+  },
+  {
+    "title": "Timeline",
+    "pageType": "timeline",
+    "href": "#/me"
+  },
+  {
+    "title": "Logout",
+    "pageType": "logout",
+    "href": "#/logout"
+  }
+]

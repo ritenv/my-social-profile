@@ -1,0 +1,273 @@
+/**
+==========================
+Common Styles
+==========================
+**/
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size:14px;
+  height:auto;
+  margin: 0px;
+  padding: 0px;
+  background-color: #F5F5F5;
+}
+
+a {
+  color: #106CC8;
+  text-decoration: none;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/**
+==========================
+Toolbar / header Styles
+==========================
+**/
+
+md-toolbar#header-toolbar {
+  min-height: 440px;
+  margin-bottom: -115px;
+  background-color: transparent;
+}
+
+md-toolbar#header-toolbar h1 {
+  padding: 8px 20px;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+/**
+==========================
+Menu Styles
+==========================
+**/
+
+.menu {
+  margin: 10px;
+}
+
+.menu-btn {
+  background-color: transparent;
+  border: none;
+  height: 38px;
+  margin: 16px;
+  min-width: 36px;
+}
+
+.menu .md-button {
+  padding: 4px 12px;
+  margin: 0;
+  min-width: 0;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+}
+  .menu .md-button.active, .menu .md-button:hover {
+    border-bottom: 2px solid #fff;
+  }
+  .menu a.md-button:hover {
+    background-color: transparent;
+  }
+
+.menu .md-button .md-ripple-container {
+  display: none;
+}
+
+
+/**
+==========================
+Sidenav Styles
+==========================
+**/
+
+md-list .md-button {
+  color: inherit;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+}
+  md-list .md-button.selected {
+    color: #03a9f4;
+  }
+
+  md-sidenav  md-list {
+    padding: 0px 0px 8px 0px;
+  }
+
+/**
+==========================
+Layout Styles
+==========================
+**/
+
+.msp-container {
+  position: relative;
+  overflow: visible;
+  max-width: 1024px;
+  z-index: 2;
+  margin: auto;
+  border-radius: 3px;
+  margin-bottom: 100px;
+}
+
+/**
+==========================
+Profile-avatar Styles
+==========================
+**/
+
+.avatar {
+  width: 148px;
+  height: 148px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  margin: 0px;
+  vertical-align: middle;
+  background: #fff;
+  overflow: hidden;
+}
+.avatar-pull-up {
+  margin-top: -104px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+/**
+==========================
+Post-list Styles
+==========================
+**/
+.feed md-list-item {
+  transition: all 1s;
+}
+.feed md-list-item.md-3-line {
+  min-height: 0;
+  padding: 15px;
+}
+.feed md-list-item.md-3-line {
+  border-bottom: 1px dashed #ccc;
+}
+.feed md-list-item.md-3-line:last-child {
+  border: none;
+}
+.feed md-list-item.md-3-line .md-list-item-text p.content {
+  margin: 8px 0;
+}
+.feed md-list-item.md-3-line .md-list-item-text {
+  margin: 0;
+}
+.feed md-list-item.is-new {
+  background-color: #F9FFD6;
+}
+
+.feed .user a {
+  color: #333;
+}
+  .feed .user a:hover {
+    color: #FF5252;
+  }
+
+.feed .actions a {
+  margin-right: 6px;
+  text-decoration: none;
+  border: none;
+  color: #58718B;
+  display: inline-block;
+  padding: 3px 5px;
+  border: 1px dotted #ccc;
+}
+.feed .actions a md-icon {
+  color: #58718B;
+  width: 18px;
+  height: 18px;
+}
+.feed .actions a:hover {
+  border: 1px solid;
+}
+
+.fullname {
+  margin: 0;
+  margin-top: 30px;
+  font-weight: 400;
+  color: #444;
+}
+
+/**
+==========================
+Friends-list Styles
+==========================
+**/
+
+.friends-list md-list-item.md-3-line {
+  min-height: 0;
+  padding: 15px;
+}
+.friends-list md-list-item.md-3-line .md-list-item-text {
+  margin: 0;
+}
+
+.friends-list .md-button {
+  text-transform: none;
+  padding: 0;
+  margin: 0;
+}
+
+.friends-list md-list-item.md-3-line > .md-avatar {
+  margin-top: 0;
+  height: auto;
+}
+
+/**
+==========================
+Timeline-page Styles
+==========================
+**/
+
+.back-button-pull-up {
+  margin-top: -50px;
+}
+
+.loading {
+  text-align: center;
+  margin: 40px;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+/**
+==========================
+Post-writer Styles
+==========================
+**/
+
+.post-writer {
+  padding: 19px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  margin: 0 -16px;
+}
+.post-writer .permissions-input {
+  margin-top: 11px;
+}
+.post-writer-pull-up {
+  display: block;
+  margin-top: -70px;
+}
+
+/**
+==========================
+Cover-photo Styles
+==========================
+**/
+
+.cover-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 440px;
+  background-size: cover;
+  background-color: #007DCB;
+}

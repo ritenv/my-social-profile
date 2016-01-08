@@ -1,0 +1,19 @@
+<md-list class="feed">
+   <md-list-item class="md-3-line" ng-repeat="post in feed" ng-class="{'is-new': post.isNew}">
+		   <a msp-profile-link="{{post.user.username}}" href="#">
+            <img ng-src="{{post.user.avatar}}" class="md-avatar" alt="Riten Vagadiya" />      
+         </a>
+			<div class="md-list-item-text" layout="column">
+   		  	<h3 class="user">
+   		  		<a msp-profile-link="{{post.user.username}}" href="#">{{post.user.name}}</a>
+   		  	</h3>
+   		  	<p class="content">
+   		  		{{post.content}}
+   		  	</p>
+   		  	<p class="actions" msp-ripple>
+   		  		<a><md-icon md-svg-src="assets/svg/thumb.svg"></md-icon> Like ({{post.likes}})</a>
+   		  		<a><md-icon md-svg-src="assets/svg/post.svg"></md-icon> Reply</a>
+   		  	</p>
+			</div>
+	</md-list-item>
+</md-list>

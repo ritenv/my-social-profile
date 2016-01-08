@@ -1,0 +1,38 @@
+<div class="post-writer">
+	<div class="post-toggler" layout="row">
+		<span flex></span>
+		<md-button class="md-fab" ng-click="writePost = !writePost" ng-show="!writePost">
+			<md-icon md-svg-src="assets/svg/post.svg"></md-icon>
+		</md-button>
+		<md-button class="md-fab md-primary" ng-click="writePost = !writePost" ng-show="writePost">
+			<md-icon md-svg-src="assets/svg/close.svg"></md-icon>
+		</md-button>
+	</div>
+	<div class="post-form" ng-if="writePost">
+		<form name="postForm" novalidate ng-submit="savePost(postForm.$valid)">
+			<div layout="row">
+				<md-input-container class="md-block" flex>
+		          <label>New Post</label>
+		          <textarea id="newPost" ng-model="newPost.content" columns="1" md-maxlength="500" rows="5"></textarea>
+		        </md-input-container>
+		        
+			</div>
+			<div layout="row">
+              	<div>
+              		<md-button msp-ripple="header-toolbar" type="submit" class="md-primary md-raised">Post</md-button>
+              	</div>
+              	<md-input-container class="permissions-input">
+	                <!-- <label>To</label> -->
+	                <md-select ng-model="newPost.permissions">
+	                  <md-option value="public" selected>
+	                    Public
+	                  </md-option>
+	                  <md-option value="friends-only">
+	                    Friends Only
+	                  </md-option>
+	                </md-select>
+              	</md-input-container>
+			</div>
+		</form>
+	</div>
+</div>

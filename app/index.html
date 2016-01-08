@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <title>My Social Profile (MSP)</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic'>
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="assets/app.css"/>
+
+    <style type="text/css">
+        /**
+         * Hide when Angular is not yet loaded and initialized
+         */
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+          display: none !important;
+        }
+    </style>
+
+  </head>
+
+  <body ng-app="msp.app" layout="row" ng-cloak>
+
+    <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left">
+      <msp-user-list heading="Buddies" msp-toggle-menu ng-click="toggleView()">
+    </md-sidenav>
+
+
+    <div flex tabIndex="-1" role="main" class="">
+
+      <md-toolbar msp-ripple layout="row" class="md-whiteframe-z1 header-toolbar" id="header-toolbar">
+        <div flex hide-gt-sm>
+
+          <!-- NOTE: Toggle mobile menu functionality inside msp-toggle-menu directive -->
+          <md-button msp-toggle-menu class="menu-btn" ng-click="toggleView()" aria-label="Show Menu">
+            <md-icon md-svg-src="assets/svg/menu.svg"></md-icon>
+          </md-button>
+
+        </div>
+        <h1 flex-gt-sm><strong>My Social</strong> Profile</h1>
+        
+        <!-- The menu -->
+        <msp-core-menu hide-sm hide-xs></msp-core-menu>
+
+      </md-toolbar>
+      <div flex id="content" md-scroll-y>
+        <div ng-view></div>
+      </div>
+
+    </div>
+
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.js"></script>
+    <script src="./bower_components/angular-route/angular-route.js"></script>
+    <script src="./bower_components/angular-resource/angular-resource.js"></script>
+    <script src="./bower_components/angular-material/angular-material.js"></script>
+    <script src="./bower_components/lodash/lodash.js"></script>
+  
+    <!-- Core module -->
+    <script src="./src/core/core.js"></script>
+
+    <!-- Core menu component -->
+    <script src="./src/core/components/menu/menu.directive.js"></script>
+    <script src="./src/core/components/menu/menu.service.js"></script>
+
+    <!-- Core ripple component -->
+    <script src="./src/core/components/ripple/ripple.directive.js"></script>
+
+    <!-- Core loading component -->
+    <script src="./src/core/components/loading/loading.directive.js"></script>
+    
+    <!-- Users module & services -->
+    <script src="./src/users/users.js"></script>
+    <script src="./src/users/users.service.js"></script>
+
+    <!-- Posts module & services -->
+    <script src="./src/posts/posts.js"></script>
+    <script src="./src/posts/posts.service.js"></script>
+    
+    <!-- Users directives -->
+    <script src="./src/users/directives/cover-photo/cover-photo.directive.js"></script>
+    <script src="./src/users/directives/profile-avatar/profile-avatar.directive.js"></script>
+    <script src="./src/users/directives/user-list/user-list.directive.js"></script>
+    <script src="./src/users/directives/profile-link/profile-link.directive.js"></script>
+
+    <!-- Posts directives -->
+    <script src="./src/posts/directives/post-writer/post-writer.directive.js"></script>
+    <script src="./src/posts/directives/post-list/post-list.directive.js"></script>
+    
+    <!-- Feed page -->
+    <script src="./src/pages/feed/feed.js"></script>
+    <script src="./src/pages/feed/feed.route.js"></script>
+    <script src="./src/pages/feed/feed.controller.js"></script>
+
+    <!-- Timeline page -->
+    <script src="./src/pages/timeline/timeline.js"></script>
+    <script src="./src/pages/timeline/timeline.route.js"></script>
+    <script src="./src/pages/timeline/timeline.controller.js"></script>
+
+    <!-- <script src="./src/pages/about/About.js"></script>
+    <script src="./src/pages/about/AboutRoute.js"></script>
+    <script src="./src/pages/about/AboutController.js"></script>
+    <script src="./src/pages/about/AboutService.js"></script>
+
+    <script src="./src/pages/purpose/Purpose.js"></script>
+    <script src="./src/pages/purpose/PurposeRoute.js"></script>
+    <script src="./src/pages/purpose/PurposeController.js"></script> -->
+
+    <script src="./src/app.js"></script>
+
+  </body>
+</html>

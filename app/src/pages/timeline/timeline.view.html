@@ -1,0 +1,41 @@
+<msp-cover-photo photo="{{page.activeUser.cover}}"></msp-cover-photo>
+<div class="msp-container">
+	
+		
+	<div layout-gt-sm="row" layout-sm="column">
+		<md-card flex="100" flex-gt-sm="100">
+			<md-card-content>
+				<div layout="row">
+					<!-- The user's avatar -->
+					<msp-profile-avatar ng-if="page.activeUser" photo="{{page.activeUser.avatar}}" class="avatar-pull-up"></msp-profile-avatar>
+					<h2 class="fullname">{{page.activeUser.name}}'s posts</h2>
+				</div>
+	
+				<div class="back-button back-button-pull-up" layout="row">
+					<span flex></span>
+					<md-button class="md-fab md-primary" href="#/">
+						<md-icon md-svg-src="assets/svg/back.svg"></md-icon>
+						<md-tooltip>Back to Feed</md-tooltip>
+					</md-button>
+				</div>
+				
+				<!-- The post list -->
+				<msp-post-list ng-if="page.activeUser" type="timeline" user="{{page.activeUser.username}}"></msp-post-list>
+				
+				<!-- In-place loading indicator -->
+				<msp-loading ng-if="!page.activeUser"></msp-loading>
+			</md-card-content>
+		</md-card>
+		
+		<!-- <div flex="30" hide-sm hide-xs>
+			<md-card>
+				<md-card-content layout="column">
+					<md-button flex>Go Back</md-button>
+				</md-card-content>
+			</md-card>
+		</div> -->
+	</div>
+
+
+
+</div>
