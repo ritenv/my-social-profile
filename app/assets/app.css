@@ -193,6 +193,12 @@ Post-list Styles
   font-weight: 400;
   color: #444;
 }
+@media screen and (max-width: 767px) {
+  .fullname {
+    font-size: 110%;
+    font-weight: 500;
+  }
+}
 
 /**
 ==========================

@@ -26,6 +26,7 @@
   <body ng-app="msp.app" layout="row" ng-cloak>
 
     <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left">
+      <msp-core-menu msp-toggle-menu ng-click="toggleView()"></msp-core-menu>
       <msp-user-list heading="Buddies" msp-toggle-menu ng-click="toggleView()">
     </md-sidenav>
 
