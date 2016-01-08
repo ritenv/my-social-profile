@@ -131,7 +131,9 @@ The app currently features the following elements:
 Provided with more time, below could enhance the application further:
 - Write end-to-end tests
 - Complete remaining unit tests (97% coverage currently)
-- Add CSS3 animations (ngAnimate module already added)
+- Add CSS3 animations (ngAnimate module already added) to prevent page stagger
+- Add build tools for generating a `dist` version (minified, uglified version)
+- Use $templateCache to preload .html all partial views
 
 ## Credits
 
