@@ -1,7 +1,5 @@
-<msp-cover-photo photo="{{page.activeUser.cover}}"></msp-cover-photo>
+<msp-cover-photo ng-if="page.activeUser" photo="{{page.activeUser.cover}}"></msp-cover-photo>
 <div class="msp-container">
-	
-		
 	<div layout-gt-sm="row" layout-sm="column">
 		<md-card flex="100" flex-gt-sm="100">
 			<md-card-content>
@@ -26,16 +24,5 @@
 				<msp-loading ng-if="!page.activeUser"></msp-loading>
 			</md-card-content>
 		</md-card>
-		
-		<!-- <div flex="30" hide-sm hide-xs>
-			<md-card>
-				<md-card-content layout="column">
-					<md-button flex>Go Back</md-button>
-				</md-card-content>
-			</md-card>
-		</div> -->
 	</div>
-
-
-
 </div>
